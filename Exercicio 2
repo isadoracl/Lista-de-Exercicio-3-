@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Main {
+  public static void main(String[] args) {
+    Scanner ler = new Scanner(System.in);
+    String nome, senha;
+    System.out.println("Digite seu nome completo: ");
+    nome = ler.next();
+    System.out.println("Digite sua senha: ");
+    senha = ler.next();
+    
+    while (senha.equals(nome))
+      {
+       System.out.println("Sua senha não pode ser iguai ao seu nome, digite a senha novamente: ");
+       senha =ler.next();
+      }
+    System.out.println("Logado com sucesso!");
+    
+    
+  }
+
+
+}
