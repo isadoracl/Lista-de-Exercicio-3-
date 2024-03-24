@@ -1,0 +1,48 @@
+import java.util.Scanner;
+public class Main {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    
+
+    float [] notas_jurados = new float[7]; 
+    float nota_maior, nota_menor, soma_notas, nota_final;
+    String nome_atleta;
+    int x;
+
+    System.out.println("Digite o nome do atleta: ");
+    nome_atleta = sc.nextLine();
+    for (x = 0; x < 7; x++)
+      {
+      System.out.println("Digite a nota do  " + (x+1) + "º jurado: ");
+      notas_jurados[x] = sc.nextFloat();
+      }
+    
+    nota_maior = notas_jurados[0];
+      for (x = 1; x < 7; x++) 
+        {
+          if (notas_jurados[x] > nota_maior)
+            nota_maior = notas_jurados[x];
+        }
+
+    nota_menor = notas_jurados[0];
+    for (x = 1; x < 7; x++) 
+      {
+        if (notas_jurados[x] < nota_menor)
+          nota_menor = notas_jurados[x];
+      }
+
+    soma_notas = 0;
+    for (x = 0; x < 7; x++)
+      {
+      soma_notas = soma_notas + notas_jurados[x]; 
+      }
+    soma_notas = soma_notas - (nota_maior + nota_menor);
+    nota_final = soma_notas / 5;
+
+    System.out.println("Atleta: " + nome_atleta);
+    System.out.println("A maior nota é: " + nota_maior);
+    System.out.println("A menor nota é: " + nota_menor);
+    System.out.println("A nota final é: " + nota_final);
+    
+  }
+}
