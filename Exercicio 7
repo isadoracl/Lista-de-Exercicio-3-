@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Main {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+
+    int [] numeros = new int[5]; 
+    int n, num_maior;
+
+    for (n = 0; n < 5; n++)
+      {
+      System.out.println("Digite o " + (n+1) + "º número: ");
+      numeros[n] = sc.nextInt();
+      }
+
+    num_maior = numeros[0];
+      for (n = 1; n < 5; n++) 
+        {
+          if (numeros[n] > num_maior)
+            num_maior = numeros[n];
+        }
+    System.out.println("O maior número é: " + num_maior);
+  }
+}
