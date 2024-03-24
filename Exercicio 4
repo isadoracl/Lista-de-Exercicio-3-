@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Main {
+  
+  public static void main(String[] args) {
+  Scanner sc = new Scanner(System.in);
+
+    int populacaoA = 80000, populacaoB = 200000, anos = 0;
+    double taxaA = 0.03, taxaB = 0.015;
+    
+    while (populacaoA < populacaoB) 
+      {
+      populacaoA += populacaoA * taxaA;
+      populacaoB += populacaoB * taxaB;
+      anos++;
+      }
+    
+    System.out.println(" O número de anos necessários para que a população do país A ultrapasse ou iguale a população do país B é " + anos+ " anos");
+  }
+ }
+}
